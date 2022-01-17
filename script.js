@@ -61,6 +61,11 @@ generate.addEventListener('click', function(){
 
       generateCells(level1,1,100);
       grid.style.width = '400px';
+      const singleCell = document.querySelector('.cell')
+
+      singleCell.addEventListener('click', function(){
+         this.style.backgroundColor = 'blue';
+      })
       
    }else if (levelChoise === 'level2'){
       generateCells(level2,1,81);
