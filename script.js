@@ -36,7 +36,7 @@ function generateCells(number,min,max){
       element.append(getRandomNum(min,max));
 
       element.addEventListener('click', function(){
-         element.classList.toggle('clicked');
+         this.classList.toggle('clicked');
       })
    }
 }
@@ -61,22 +61,23 @@ const level3 = 49;
 // * Al click genero la tabella 
 generate.addEventListener('click', function(){
    
+   grid.innerText = '';
    const levelChoise = userChoice.value;
 
    if (levelChoise === 'level1'){
 
       generateCells(level1,1,100);
-      grid.style.width = '400px';
+      grid.style.width = '500px';
 
       
    }else if (levelChoise === 'level2'){
       generateCells(level2,1,81);
-      grid.style.width = '360px'
+      grid.style.width = '450px'
 
       
    } else {
       generateCells(level3,1,49);
-      grid.style.width = '280px';
+      grid.style.width = '350px';
       
    }
 
