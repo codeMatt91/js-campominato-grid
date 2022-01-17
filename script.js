@@ -28,11 +28,16 @@ function getRandomNum(min, max){
 // * Funzione che mi crea le celle e le mette in tabella con numero random 
 function generateCells(number,min,max){
    for(let i = 0; i < number; i++){
-      const element = document.createElement('div');
+      let element = document.createElement('div');
+      element = document.createElement('div');
       grid.appendChild(element);
       element.className = 'cell';
 
       element.append(getRandomNum(min,max));
+
+      element.addEventListener('click', function(){
+         element.classList.toggle('clicked');
+      })
    }
 }
 
@@ -43,6 +48,7 @@ function generateCells(number,min,max){
 const userChoice = document.getElementById('select');
 const grid = document.getElementById('grid');
 const generate = document.getElementById('generate');
+
 
 //* Le mie variabili
 const level1 = 100;
@@ -61,11 +67,7 @@ generate.addEventListener('click', function(){
 
       generateCells(level1,1,100);
       grid.style.width = '400px';
-      const singleCell = document.querySelector('.cell')
 
-      singleCell.addEventListener('click', function(){
-         this.style.backgroundColor = 'blue';
-      })
       
    }else if (levelChoise === 'level2'){
       generateCells(level2,1,81);
