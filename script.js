@@ -20,22 +20,21 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 //! ***********************************  FUNCTION    ************************************
 
-
+// * Funzione che mi genera un numero random 
 function getRandomNum(min, max){
    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function generateCells(number){
+// * Funzione che mi crea le celle e le mette in tabella con numero random 
+function generateCells(number,min,max){
    for(let i = 0; i < number; i++){
       const element = document.createElement('div');
       grid.appendChild(element);
       element.className = 'cell';
 
-      element.append(getRandomNum(1,100));
+      element.append(getRandomNum(min,max));
    }
 }
-
-
 
 
 //! ****************************************  LOGIC    ****************************************
@@ -49,28 +48,29 @@ const generate = document.getElementById('generate');
 const level1 = 100;
 const level2 = 81;
 const level3 = 49;
-const list = [];
 
 
 
 
+// * Al click genero la tabella 
 generate.addEventListener('click', function(){
    
    const levelChoise = userChoice.value;
 
    if (levelChoise === 'level1'){
 
-      generateCells(level1);
+      generateCells(level1,1,100);
       grid.style.width = '400px';
-      return;
+      
    }else if (levelChoise === 'level2'){
-      generateCells(level2);
+      generateCells(level2,1,81);
       grid.style.width = '360px'
-      return;
+
+      
    } else {
-      generateCells(level3);
+      generateCells(level3,1,49);
       grid.style.width = '280px';
-      return;
+      
    }
 
 })
