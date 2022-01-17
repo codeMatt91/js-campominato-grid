@@ -28,6 +28,7 @@ function getRandomNum(min, max){
 function generateCells(number){
    for(let i = 0; i < number; i++){
       const element = document.createElement('div');
+      grid.appendChild(element);
       element.className = 'cell';
 
       element.append(getRandomNum(1,100));
@@ -50,3 +51,9 @@ const level2 = 81;
 const level3 = 49;
 const list = [];
 
+if (userChoice === 'level1') {
+
+   generate.addEventListener('click', function(){
+      generateCells(level1);
+   })
+}
