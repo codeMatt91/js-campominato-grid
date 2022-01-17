@@ -4,7 +4,21 @@
   box-sizing: border-box;
 }
 
-
+.window {
+  height: 1000px;
+}
 #grid {
-   height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+}
+
+button {
+   border: 1px solid black;
+   padding: 5px 5px;
 }
