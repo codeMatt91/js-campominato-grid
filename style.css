@@ -10,6 +10,7 @@
 #grid {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .cell {

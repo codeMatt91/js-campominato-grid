@@ -51,9 +51,26 @@ const level2 = 81;
 const level3 = 49;
 const list = [];
 
-if (userChoice === 'level1') {
 
-   generate.addEventListener('click', function(){
+
+
+generate.addEventListener('click', function(){
+   
+   const levelChoise = userChoice.value;
+
+   if (levelChoise === 'level1'){
+
       generateCells(level1);
-   })
-}
+      grid.style.width = '400px';
+      return;
+   }else if (levelChoise === 'level2'){
+      generateCells(level2);
+      grid.style.width = '360px'
+      return;
+   } else {
+      generateCells(level3);
+      grid.style.width = '280px';
+      return;
+   }
+
+})
