@@ -4,7 +4,6 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="author" content="Imbimbo Matteo">
-   <!-- CSS only -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
    <link rel="stylesheet" href="style.css">
@@ -12,20 +11,23 @@
 </head>
 
 <body>
-   <header class="d-flex justify-content-between">
-      <h1>Campo Minato</h1>
-      <div id="form">
-         <label for="select">Scegli un livello:</label>
+   <header class="p-3">
+      <div class="container d-flex justify-content-between">
+         <h1>Campo Minato</h1>
+         <div id="form" class="d-flex align-items-center">
+            <label for="select">Scegli un livello:</label>
          
-         <select name="select" id="select">
-            <option value="level1">Level 1</option>
-            <option value="level2">Level 2</option>
-            <option value="level3">Level 3</option>
-         </select>
+            <select name="select" id="select">
+               <option value="empty">--</option>
+               <option value="level1">Level 1</option>
+               <option value="level2">Level 2</option>
+               <option value="level3">Level 3</option>
+            </select>
+         </div>
       </div>
-
    </header>
-   <div id="grid">
+   
+   <div id="grid" class="bg-primary">
 
    </div>
 
